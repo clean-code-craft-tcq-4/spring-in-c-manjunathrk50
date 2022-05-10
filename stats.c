@@ -5,7 +5,7 @@
 #include <math.h>
 
 
-struct Stats compute_statistics(float, int, struct);
+//struct Stats compute_statistics(float, int, struct);
 
 
 //struct Stats compute_statistics(const float* numberset, int setlength)
@@ -28,12 +28,12 @@ int main()
 	
     float numberset[] = {99.8, 34.2, 4.5};
     int setlength = (int)sizeof(numberset) / sizeof(numberset[0]);
-	struct Stats compute_statistics(numberset, setlength, s);
+	struct Stats compute_statistics(numberset[], setlength, &s);
 	
 	
 }
 
-struct Stats compute_statistics(float numberset[], int setlength, struct Stats s)
+struct Stats compute_statistics(float numberset[], int setlength, struct Stats *ptr)
 {
 	int i,j;
 	float avg, sum=0;
@@ -55,9 +55,9 @@ struct Stats compute_statistics(float numberset[], int setlength, struct Stats s
 		}
 		printf("\n");
 		avg=(sum)/(setlength);
-		s.min=numberset[0];
-		s.max=numberset[setlength-1];
-		s.average = avg;
+		ptr->min=numberset[0];
+		ptr->max=numberset[setlength-1];
+		ptr->average = avg;
 	}
 	
 	
