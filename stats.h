@@ -1,6 +1,6 @@
 //struct Stats compute_statistics(const float* numberset, int setlength);
 //struct Stats compute_statistics(float, int, struct Stats);
-struct Stats compute_statistics(float numberset[], int setlength, struct Stats s);
+void compute_statistics(float numberset[], int setlength, struct Stats *ptr);
 	
 
 typedef void (*alerter_funcptr)();
