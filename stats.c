@@ -3,7 +3,7 @@
 
 #include <stdlib.h>
 #include <math.h>
-#define 0 NAN
+
 
 struct Stats {
     
