@@ -39,7 +39,7 @@ const char *show_classification(double x) {
 
 struct Stats compute_statistics(float numberset[], int setlength, struct Stats *ptr)
 {
-	int i,j;
+	int i;
 	float avg, sum=0;
 	float mn=numberset[0], mx=numberset[0];
 	//char* ret=NULL;
