@@ -5,14 +5,14 @@
 #include <math.h>
 
 
-struct Stats {
+/*struct Stats {
     
     float average;
     float min;
     float max;
 };
 
-void compute_statistics(float numberset[], int setlength, struct Stats *ptr);
+void compute_statistics(float numberset[], int setlength, struct Stats *ptr);*/
 
 int emailAlertCallCount = 0;
 int ledAlertCallCount = 0;
