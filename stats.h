@@ -1,5 +1,12 @@
 //struct Stats compute_statistics(const float* numberset, int setlength);
 //struct Stats compute_statistics(float, int, struct Stats);
+struct Stats {
+    
+    float average;
+    float min;
+    float max;
+};
+struct Stats computedStats;
 void compute_statistics(float numberset[], int setlength, struct Stats *ptr);
 	
 
