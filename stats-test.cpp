@@ -2,6 +2,7 @@
 
 #include "catch.hpp"
 #include "stats.h"
+#include "alerts.h"
 
 #include <stdlib.h>
 #include <math.h>
@@ -35,10 +36,12 @@ TEST_CASE("average is NaN for empty array") {
 }
 
 TEST_CASE("raises alerts when max is greater than threshold") {
-    // create additional .c and .h files
+    /// create additional .c and .h files
     // containing the emailAlerter, ledAlerter functions
-    alerter_funcptr alerters[] = {emailAlerter, ledAlerter};
-
+    //alerter_funcptr alerters[] = {emailAlerter, ledAlerter};
+	
+void (*check_and_alert[])(int, int)={emailAlerter, ledAlerter};
+    unsigned ch;
     float numberset[] = {99.8, 34.2, 4.5};
 	struct Stats computedStats;
     int setlength = sizeof(numberset) / sizeof(numberset[0]);
@@ -46,7 +49,11 @@ TEST_CASE("raises alerts when max is greater than threshold") {
     compute_statistics(numberset, setlength, &computedStats);
 
     const float maxThreshold = 10.2;
-    check_and_alert(maxThreshold, alerters, computedStats);
+	
+	printf("Enter Choice: 0 for emailAlerter, 1 for ledAlerter\n");
+    scanf("%d", &ch);
+	(*check_and_alert[ch]) (maxThreshold, &computedStats)
+    //check_and_alert(maxThreshold, alerters, computedStats);
 
     // need a way to check if both emailAlerter, ledAlerter were called
     // you can define call-counters along with the functions, as shown below
