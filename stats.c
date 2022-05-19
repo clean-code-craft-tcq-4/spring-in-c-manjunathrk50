@@ -29,13 +29,13 @@ int ledAlertCallCount = 0;
 	struct Stats compute_statistics(numberset[], setlength, &s);
 }*/
 
-const char *show_classification(double x) {
+/*const char *show_classification(double x) {
     switch(fpclassify(x)) {
         case FP_INFINITE:  return "Inf";
         case FP_NAN:       return "NaN";
         default:           return "unknown";
     }
-}
+}*/
 
 struct Stats compute_statistics(float numberset[], int setlength, struct Stats *ptr)
 {
@@ -48,7 +48,7 @@ struct Stats compute_statistics(float numberset[], int setlength, struct Stats *
 	{
 		throw "Division by Zero condition ie NaN";
 	}*/
-	if(show_classification(0.0/0.0) == NaN)
+	if(setlength == 0)
 	{
 		ptr->min=0;
 		ptr->max=0;
