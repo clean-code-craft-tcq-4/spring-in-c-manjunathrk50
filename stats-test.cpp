@@ -40,7 +40,7 @@ TEST_CASE("raises alerts when max is greater than threshold") {
     // containing the emailAlerter, ledAlerter functions
     //alerter_funcptr alerters[] = {emailAlerter, ledAlerter};
 	
-void (*check_and_alert[])(int, int)={emailAlerter, ledAlerter};
+
     unsigned ch;
     float numberset[] = {99.8, 34.2, 4.5};
 	struct Stats computedStats;
@@ -49,6 +49,7 @@ void (*check_and_alert[])(int, int)={emailAlerter, ledAlerter};
     compute_statistics(numberset, setlength, &computedStats);
 
     const float maxThreshold = 10.2;
+void (*check_and_alert[])(int, struct Stats)={emailAlerter, ledAlerter};
 	
 	printf("Enter Choice: 0 for emailAlerter, 1 for ledAlerter\n");
     scanf("%d", &ch);
