@@ -52,7 +52,7 @@ void (*check_and_alert[])(int, int)={emailAlerter, ledAlerter};
 	
 	printf("Enter Choice: 0 for emailAlerter, 1 for ledAlerter\n");
     scanf("%d", &ch);
-	(*check_and_alert[ch]) (maxThreshold, &computedStats)
+	(*check_and_alert[ch]) (maxThreshold, &computedStats);
     //check_and_alert(maxThreshold, alerters, computedStats);
 
     // need a way to check if both emailAlerter, ledAlerter were called
