@@ -50,9 +50,9 @@ struct Stats compute_statistics(float numberset[], int setlength, struct Stats *
 	}*/
 	if(setlength == 0)
 	{
-		ptr->min=0;
-		ptr->max=0;
-		ptr->average = 0;
+		ptr->min=NAN;
+		ptr->max=NAN;
+		ptr->average = NAN;
 	}
 	else {
 	for(i=1;i<setlength;i++)
