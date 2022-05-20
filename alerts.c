@@ -7,8 +7,8 @@
 
 
 
-int emailAlertCallCount = 0;
-int ledAlertCallCount = 0;
+static int emailAlertCallCount = 0;
+static int ledAlertCallCount = 0;
 
 
 void emailAlerter(int maxThreshold, struct Stats *ptr)
