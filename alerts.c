@@ -13,7 +13,7 @@ int ledAlertCallCount = 0;
 void emailAlerter(int maxThreshold, struct Stats *ptr)
 {
     printf("we are in emailAlerter section\n");
-	if(ptr->avg > maxThreshold)
+	if((ptr->avg) > maxThreshold)
 	{ printf("email threshold is crossed\n");
 		emailAlertCallCount++;
 	}
@@ -24,7 +24,7 @@ void emailAlerter(int maxThreshold, struct Stats *ptr)
 void ledAlerter(int maxThreshold, struct Stats *ptr)
 {
     printf("we are in emailAlerter section\n");
-	if(ptr->avg > maxThreshold)
+	if((ptr->avg) > maxThreshold)
 	{ printf("led threshold crossed\n");
 		ledAlertCallCount++;
 	}
