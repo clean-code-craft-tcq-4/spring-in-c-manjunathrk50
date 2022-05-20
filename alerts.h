@@ -3,5 +3,5 @@ void ledAlerter(int maxThreshold, struct Stats *ptr);
 
 void (*check_and_alert[])(int maxThreshold, struct Stats *ptr)={emailAlerter, ledAlerter};
 
-extern int emailAlertCallCount;
-extern int ledAlertCallCount;
+//extern int emailAlertCallCount;
+//extern int ledAlertCallCount;
