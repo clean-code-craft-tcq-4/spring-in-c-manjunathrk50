@@ -11,7 +11,7 @@ struct Stats computedStats;
 void compute_statistics(float numberset[], int setlength, struct Stats *ptr);
 	
 
-typedef void (*alerter_funcptr)();
+//typedef void (*alerter_funcptr)();
 void check_and_alert(float maxThreshold, alerter_funcptr alerters[], struct Stats computedStats);
 
 extern int emailAlertCallCount;
