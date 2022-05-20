@@ -14,8 +14,6 @@
 
 void compute_statistics(float numberset[], int setlength, struct Stats *ptr);*/
 
-int emailAlertCallCount = 0;
-int ledAlertCallCount = 0;
 
 /*int main()
 {
