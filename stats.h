@@ -1,6 +1,6 @@
 //struct Stats compute_statistics(const float* numberset, int setlength);
 //struct Stats compute_statistics(float, int, struct Stats);
-#define NAN 0
+//#define NAN 0
 struct Stats {
     
     float average;
