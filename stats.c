@@ -79,5 +79,5 @@ printf("sum=%f\n", sum);
 		ptr->average = avg;
 printf("ptr->min=%f ptr->max=%f ptr->average=%f\n", ptr->min, ptr->max, ptr->average);
 	}
-	
+	return 0;
 }
