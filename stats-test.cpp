@@ -10,7 +10,7 @@
 
 TEST_CASE("reports average, minimum and maximum") {
     float numberset[] = {1.5, 8.9, 3.2, 4.5};
-	struct Stats computedStats;
+	//struct Stats computedStats;
     int setlength = sizeof(numberset) / sizeof(numberset[0]);
     //struct Stats computedStats = compute_statistics(numberset, setlength, struct Stats s);
      compute_statistics(numberset, setlength, &computedStats);
@@ -22,7 +22,7 @@ TEST_CASE("reports average, minimum and maximum") {
 
 TEST_CASE("average is NaN for empty array") {
     //Stats computedStats = compute_statistics(0, 0, struct Stats s);
-	struct Stats computedStats;
+	//struct Stats computedStats;
 	 compute_statistics(0, 0, &computedStats);
     //All fields of computedStats (average, max, min) must be
     //NAN (not-a-number), as defined in math.h
@@ -43,7 +43,7 @@ TEST_CASE("raises alerts when max is greater than threshold") {
 
     unsigned ch;
     float numberset[] = {99.8, 34.2, 4.5};
-	struct Stats computedStats;
+	//struct Stats computedStats;
     int setlength = sizeof(numberset) / sizeof(numberset[0]);
    // Stats computedStats = compute_statistics(numberset, setlength);
     compute_statistics(numberset, setlength, &computedStats);
