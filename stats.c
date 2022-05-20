@@ -35,7 +35,7 @@ void compute_statistics(float numberset[], int setlength, struct Stats *ptr);*/
     }
 }*/
 
-struct Stats compute_statistics(float numberset[], int setlength, struct Stats *ptr)
+void compute_statistics(float numberset[], int setlength, struct Stats *ptr)
 {
 	int i;
 	float avg, sum=0;
@@ -79,5 +79,5 @@ printf("sum=%f\n", sum);
 		ptr->average = avg;
 printf("ptr->min=%f ptr->max=%f ptr->average=%f\n", ptr->min, ptr->max, ptr->average);
 	}
-	return 0;
+	
 }
