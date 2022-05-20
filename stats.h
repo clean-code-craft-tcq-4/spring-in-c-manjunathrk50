@@ -8,7 +8,7 @@ struct Stats {
     float max;
 };
 struct Stats computedStats;
-void compute_statistics(float numberset[], int setlength, struct Stats *ptr);
+struct Stats compute_statistics(float numberset[], int setlength, struct Stats *ptr);
 	
 
 //typedef void (*alerter_funcptr)();
